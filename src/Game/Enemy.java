@@ -17,13 +17,13 @@ public class Enemy extends Sprite
 	
 	public void move()
 	{
-		if(x < player.x && x > 0)
+		if(x < player.x && x < Board.WIDTH - 50)
 			x += 5;
-		if(x > player.x && x < Board.WIDTH - 50)
+		if(x > player.x && x > 0)
 			x -= 5;
-		if(y < player.y && y > 0)
+		if(y < player.y && y < Board.HEIGHT - 50)
 			y += 5;
-		if(y > player.y && y < Board.HEIGHT - 50)
+		if(y > player.y && y > 0)
 			y -= 5;
 		if(getBounds().intersects(player.getBounds()))
 		{
